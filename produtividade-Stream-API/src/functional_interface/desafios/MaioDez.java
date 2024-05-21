@@ -9,16 +9,14 @@ public class MaioDez {
 
     public static void main(String[] args) {
 
-        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 4, 3,11);
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 4, 3,25);
 
         Predicate<Integer> maior = num -> num > 10;
 
-     numeros.stream()
-                .filter(i -> i > 10)
-                .forEach(System.out::println);
+            boolean existeMaiorQueDez = numeros.stream()
+                    .anyMatch(maior);
 
-//        System.out.println(maiorQueDez);
-//        System.out.println(maior);
+          System.out.println(existeMaiorQueDez);
 
     }
 }
